@@ -41,7 +41,7 @@
   <packaging>jar</packaging>
   <groupId>be.wannesvandorpe</groupId>
   <artifactId>eid</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <developers>
     <developer>
       <id>Nawsen</id>
