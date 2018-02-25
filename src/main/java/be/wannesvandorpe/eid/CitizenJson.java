@@ -9,7 +9,7 @@ public class CitizenJson {
     private String firstName;
     private String nationalNumber;
     private String placeOfBirth;
-    private String dateOfBirth;
+    private Long dateOfBirth;
 
     private String streetAndNumber;
     private String zip;
@@ -20,7 +20,7 @@ public class CitizenJson {
         this.firstName = id.getFirstName();
         this.nationalNumber = id.getNationalNumber();
         this.placeOfBirth = id.getPlaceOfBirth();
-        this.dateOfBirth = id.getDateOfBirth().toString();
+        this.dateOfBirth = id.getDateOfBirth().getTimeInMillis();
     }
 
     public void addAddress(Address address) {
@@ -57,7 +57,7 @@ public class CitizenJson {
         return municipality;
     }
 
-    public String getDateOfBirth() {
+    public Long getDateOfBirth() {
         return dateOfBirth;
     }
 }
