@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.smartcardio.CardException;
 import java.io.IOException;
+import java.util.Base64;
 
 public class BeIDCardReader {
 
@@ -30,7 +31,7 @@ public class BeIDCardReader {
 
                 //convert to json and send it out
                 String json = new ObjectMapper().writeValueAsString(citizenJson);
-                System.out.println(json);
+                System.out.println(Base64.getEncoder().encodeToString(json.getBytes()));
 
             } catch (final CardException cex) {
                 cex.printStackTrace();
